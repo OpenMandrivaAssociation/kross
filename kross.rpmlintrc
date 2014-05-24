@@ -1,0 +1,2 @@
+# False positive, it's actually a plugin
+addFilter("E: devel-file-in-non-devel-package")
