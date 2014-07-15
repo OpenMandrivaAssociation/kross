@@ -6,9 +6,9 @@
 %define debug_package %{nil}
 
 Name: kross
-Version: 4.99.0
-Release: 3
-Source0: http://ftp5.gwdg.de/pub/linux/kde/unstable/frameworks/%{version}/%{name}-%{version}.tar.xz
+Version: 5.0.0
+Release: 1
+Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/frameworks/%{version}/portingAids/%{name}-%{version}.tar.xz
 Source100: %{name}.rpmlintrc
 Summary: Multi-language application scripting
 URL: http://kde.org/
@@ -80,8 +80,9 @@ ninja -C build
 
 %install
 DESTDIR="%{buildroot}" ninja -C build install %{?_smp_mflags}
+%find_lang %{name}%{major}
 
-%files
+%files -f %{name}%{major}.lang
 %{_bindir}/kf5kross
 %{_libdir}/plugins/*.so
 %{_libdir}/plugins/script
