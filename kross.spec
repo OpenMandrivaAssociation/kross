@@ -6,7 +6,7 @@
 %define debug_package %{nil}
 
 Name: kross
-Version: 5.1.0
+Version: 5.3.0
 Release: 1
 Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/frameworks/%{version}/portingAids/%{name}-%{version}.tar.xz
 Source100: %{name}.rpmlintrc
