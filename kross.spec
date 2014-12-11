@@ -74,19 +74,20 @@ Development files for the KDE Frameworks 5 KrossUi library
 %prep
 %setup -q
 %apply_patches
-%cmake -G Ninja
+%cmake -G Ninja \
+	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %build
 ninja -C build
 
 %install
-DESTDIR="%{buildroot}" ninja -C build install %{?_smp_mflags}
+DESTDIR="%{buildroot}" ninja -C build install
 %find_lang %{name}%{major}
 
 %files -f %{name}%{major}.lang
 %{_bindir}/kf5kross
-%{_libdir}/plugins/*.so
-%{_libdir}/plugins/script
+%{_libdir}/qt5/plugins/*.so
+%{_libdir}/qt5/plugins/script
 %{_mandir}/man1/*
 
 %files -n %{libname}
@@ -102,9 +103,9 @@ DESTDIR="%{buildroot}" ninja -C build install %{?_smp_mflags}
 %{_includedir}/KF5/kross_version.h
 %{_libdir}/libKF5KrossCore.so
 %{_libdir}/cmake/KF5*
-%{_prefix}/mkspecs/modules/qt_KrossCore.pri
+%{_libdir}/qt5/mkspecs/modules/qt_KrossCore.pri
 
 %files -n %{udevname}
 %{_includedir}/KF5/KrossUi
 %{_libdir}/libKF5KrossUi.so
-%{_prefix}/mkspecs/modules/qt_KrossUi.pri
+%{_libdir}/qt5/mkspecs/modules/qt_KrossUi.pri
