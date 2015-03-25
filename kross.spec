@@ -7,7 +7,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kross
-Version: 5.7.0
+Version: 5.8.0
 Release: 1
 Source0: http://ftp5.gwdg.de/pub/linux/kde/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 Source100: %{name}.rpmlintrc
@@ -36,7 +36,7 @@ BuildRequires: ninja
 Requires: %{libname} = %{EVRD}
 
 %description
-Multi-language application scripting
+Multi-language application scripting.
 
 %package -n %{libname}
 Summary: Multi-language application scripting
@@ -44,7 +44,7 @@ Group: System/Libraries
 Requires: %{name} = %{EVRD}
 
 %description -n %{libname}
-Multi-language application scripting
+Multi-language application scripting.
 
 %package -n %{ulibname}
 Summary: Multi-language application UI scripting
@@ -52,7 +52,7 @@ Group: System/Libraries
 Requires: %{libname} = %{EVRD}
 
 %description -n %{ulibname}
-Multi-language application UI scripting
+Multi-language application UI scripting.
 
 %package -n %{devname}
 Summary: Development files for the KDE Frameworks 5 KrossCore library
@@ -60,7 +60,7 @@ Group: Development/KDE and Qt
 Requires: %{libname} = %{EVRD}
 
 %description -n %{devname}
-Development files for the KDE Frameworks 5 KrossCore library
+Development files for the KDE Frameworks 5 KrossCore library.
 
 %package -n %{udevname}
 Summary: Development files for the KDE Frameworks 5 KrossUi library
@@ -69,7 +69,7 @@ Requires: %{ulibname} = %{EVRD}
 Requires: %{devname} = %{EVRD}
 
 %description -n %{udevname}
-Development files for the KDE Frameworks 5 KrossUi library
+Development files for the KDE Frameworks 5 KrossUi library.
 
 %prep
 %setup -q
