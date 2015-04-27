@@ -15,16 +15,12 @@ Summary: Multi-language application scripting
 URL: http://kde.org/
 License: GPL
 Group: System/Libraries
-BuildRequires: cmake
-BuildRequires: qmake5
-BuildRequires: extra-cmake-modules5
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Script)
 BuildRequires: pkgconfig(Qt5UiTools)
 BuildRequires: pkgconfig(Qt5Test)
 BuildRequires: cmake(KF5DocTools)
 BuildRequires: cmake(ECM)
-BuildRequires: cmake(Qt5)
 BuildRequires: cmake(KF5Completion)
 BuildRequires: cmake(KF5CoreAddons)
 BuildRequires: cmake(KF5DocTools)
@@ -35,7 +31,6 @@ BuildRequires: cmake(KF5Parts)
 BuildRequires: cmake(KF5Service)
 BuildRequires: cmake(KF5WidgetsAddons)
 BuildRequires: cmake(KF5XmlGui)
-BuildRequires: ninja
 Requires: %{libname} = %{EVRD}
 
 %description
@@ -77,14 +72,13 @@ Development files for the KDE Frameworks 5 KrossUi library.
 %prep
 %setup -q
 %apply_patches
-%cmake -G Ninja \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+%cmake_kde5
 
 %build
-ninja -C build
+%ninja -C build
 
 %install
-DESTDIR="%{buildroot}" ninja -C build install
+%ninja_install -C build
 %find_lang %{name}%{major}
 
 %files -f %{name}%{major}.lang
