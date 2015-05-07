@@ -8,8 +8,8 @@
 
 Name: kross
 Version: 5.9.0
-Release: 1
-Source0: http://ftp5.gwdg.de/pub/linux/kde/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
+Release: 2
+Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 Source100: %{name}.rpmlintrc
 Summary: Multi-language application scripting
 URL: http://kde.org/
@@ -65,6 +65,7 @@ Summary: Development files for the KDE Frameworks 5 KrossUi library
 Group: Development/KDE and Qt
 Requires: %{ulibname} = %{EVRD}
 Requires: %{devname} = %{EVRD}
+Provides: cmake(KF5KrossUi)
 
 %description -n %{udevname}
 Development files for the KDE Frameworks 5 KrossUi library.
