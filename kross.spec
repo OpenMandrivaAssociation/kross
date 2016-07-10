@@ -86,7 +86,13 @@ Development files for the KDE Frameworks 5 KrossUi library.
 %{_bindir}/kf5kross
 %{_libdir}/qt5/plugins/*.so
 %{_libdir}/qt5/plugins/script
-%{_mandir}/man1/*
+%lang(ca) %{_mandir}/ca/man1/*
+%lang(de) %{_mandir}/de/man1/*
+%lang(it) %{_mandir}/it/man1/*
+%lang(nl) %{_mandir}/nl/man1/*
+%lang(pt_BR) %{_mandir}/pt_BR/man1/*
+%lang(sv) %{_mandir}/sv/man1/*
+%lang(uk) %{_mandir}/uk/man1/*
 
 %files -n %{libname}
 %{_libdir}/libKF5KrossCore.so.%{major}
