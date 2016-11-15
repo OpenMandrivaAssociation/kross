@@ -1,4 +1,2 @@
-removed_sources:
-  kross-5.13.0.tar.xz: 8906c53c0077402a7ad9bde5dcfae4220d28e45d
 sources:
-  kross-5.27.0.tar.xz: 339b2f7c127ca557f17dae45359ca016f02fd68f
+  kross-5.28.0.tar.xz: 0a6fd51a9778de320ebe2bb8b2f32c723d360ffa
