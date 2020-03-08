@@ -7,8 +7,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kross
-Version: 5.67.0
-Release: 3
+Version: 5.68.0
+Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 Source100: %{name}.rpmlintrc
 Summary: Multi-language application scripting
