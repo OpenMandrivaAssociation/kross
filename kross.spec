@@ -8,7 +8,7 @@
 
 Name: kross
 Version: 5.74.0
-Release: 2
+Release: 3
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 Source100: %{name}.rpmlintrc
 Summary: Multi-language application scripting
