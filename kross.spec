@@ -3,12 +3,11 @@
 %define devname %mklibname KF5KrossCore -d
 %define ulibname %mklibname KF5KrossUi %{major}
 %define udevname %mklibname KF5KrossUi -d
-%define debug_package %{nil}
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kross
-Version: 5.81.0
-Release: 2
+Version: 5.82.0
+Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 Source100: %{name}.rpmlintrc
 Summary: Multi-language application scripting
